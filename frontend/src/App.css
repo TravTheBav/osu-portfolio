@@ -1,0 +1,439 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+  --slate: #3B3C40;
+  --charcoal: #2c2d30;
+  --smokeBlue: #12171F;
+  --smokeBlueT: #12171FDD;
+  --skyBlue: #cddaf5;
+  --coolBlue: #516B8C;
+  --coolBlueT: #516b8c3a;
+  --suaveBlue: #94accc;
+  --forest: #404330;
+}
+
+html {
+  font-size: 12px;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {}. */
+  background-attachment: fixed;
+  background-image: url('images/kings-canyon.jpg');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--skyBlue);
+  font-family: "Noto Sans", sans-serif;
+  margin: 0px auto;
+  min-width: 320px;
+  max-width: 1000px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+/* ----- for mobile layouts, margins are added in the media query ----- */
+header, main, footer {
+  margin: 0px;
+  padding: 4%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--forest);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border: 2px solid var(--smokeBlue);
+}
+
+header img {
+  width: 3.5em;
+}
+
+header h1 {
+  margin: 0px;
+}
+
+main {
+  background-color: var(--smokeBlueT);
+}
+
+article {
+  border-bottom: 1px solid var(--coolBlue);
+}
+
+article:last-child {
+  border: none;
+}
+
+aside {
+  width: 22%;
+  max-width: 140px;
+  border: dashed 2px var(--forest);
+  margin: 8px 0px 1rem 1.2rem;
+  padding: 0px 1rem;
+}
+
+footer {
+  background-color: var(--slate);
+}
+
+/* ----- Anchors ----- Text links */
+a:link  {color: var(--suaveBlue);}
+a:visited {color: var(--suaveBlue);}
+a:hover {color: var(--skyBlue);}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: var(--coolBlue);
+  color: var(--skyBlue);
+  padding: .7rem 1.5rem;
+  margin-top: 20px;
+  border-right: 2px solid var(--smokeBlue);
+}
+
+nav a:visited {
+  color: var(--skyBlue);
+}
+
+nav a:hover {
+  color: var(--slate);
+  background-color: var(--skyBlue);
+}
+
+nav.local {
+  gap: .5rem;
+}
+
+nav.local a {
+  background-color: var(--forest);
+  color: var(--skyBlue);
+  padding: .5rem 1rem;
+  margin-top: 0px;
+  border: 2px solid var(--coolBlue);
+  border-radius: 6px;
+}
+
+nav.local a:hover {
+  color: var(--forest);
+  background-color: var(--skyBlue);
+  border: 2px dashed var(--coolBlue);
+}
+
+/*  -----  Typography  ----- */
+p {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: .15em;
+} 
+
+/*  ----- Coding or instructional typography ----- */
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+}
+
+table a:link {
+  color: var(--forest);
+}
+
+table a:hover {
+  color: var(--coolBlue);
+}
+
+table img {
+  width: 48px;
+  border: 1px solid var(--charcoal);
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+thead tr:first-child{
+  background-color: var(--suaveBlue);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--skyBlue);
+}
+
+tr:nth-child(even) {
+  background-color: var(--suaveBlue);
+}
+
+tr td, tr th {
+  border: 2px solid var(--smokeBlue);
+  padding: 10px;
+  color: var(--charcoal);
+}
+
+td label {
+  margin: 0;
+  margin-bottom: 4px;
+  color: var(--charcoal);
+  font-weight: normal;
+}
+
+/*  ----- Form ----- */
+form * {
+  color: var(--smokeBlue);
+}
+
+fieldset, legend {
+  border: 3px solid var(--forest);
+  background-color: var(--skyBlue);
+}
+
+fieldset {
+  margin-top: 1.7em;
+  padding: 2%;
+}
+
+legend {
+  font-weight: 700;
+  border-bottom: none;
+  padding: .4em .6em 0px .6em;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+label.required::after {
+  color: red;
+  content: " *";
+}
+
+label, fieldset p {
+  font-weight: 600;
+}
+
+fieldset p {
+  background-color: var(--slate);
+  color: var(--skyBlue);
+  padding: 1em;
+  border-radius: 4px;
+}
+
+fieldset p label {
+  font-weight: 400;
+  color: var(--skyBlue);
+}
+
+input, textarea, select {
+  font-size: 110%;
+  padding: .5em .8em;
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+input[type=text], input[type=email], input[type=number], textarea, select, button {
+  background-color: var(--coolBlue);
+  color: var(--skyBlue);
+  border: none;
+  border-radius: 4px;
+}
+
+*::placeholder, option {
+  color: var(--skyBlue);
+}
+
+input:focus, textarea:focus {
+  background-color: var(--forest);
+}
+
+button {
+  font-size: 110%;
+  padding: .5em .8em;
+  font-family: inherit;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: var(--forest);
+  cursor: pointer;
+}
+
+input:invalid {border: 2px solid red;}
+
+input:valid {border: 2px solid rgb(3, 179, 3);}
+
+input[type=checkbox], input[type=radio], button, label {width: auto;}
+
+textarea {
+  height: 20vh;
+  min-height: 100px;
+  max-height: 400px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+/* ----- Media ----- */
+/* .gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+*/
+
+figure {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 10px 10px 20px 10px;
+  margin: 2em 1em;
+  border: 1px solid var(--skyBlue);
+  border-radius: .3em;
+  background-color: var(--coolBlueT);
+}
+
+figcaption {
+  font-size: smaller;
+  padding: .5em 0px 0px 6px;
+  font-style: oblique;
+  font-weight: 600;
+}
+
+figure img {
+  width: 100%;
+}
+
+svg.highlightable:hover {
+  cursor: pointer;
+  fill: var(--coolBlue);
+}
+
+svg.image-gallery-svg {
+  stroke: var(--skyBlue);
+}
+
+.image-gallery-bullets .image-gallery-bullet {
+  border: 1px solid var(--skyBlue);
+}
+
+.image-gallery-bullets .image-gallery-bullet.active {
+  background-color: var(--skyBlue);
+}
+
+.image-gallery-slide .image-gallery-description {
+  background-color: var(--smokeBlueT);
+  border: 1px solid var(--suaveBlue);
+  color: var(--skyBlue);
+  line-height: 1.5;
+  left: 1em;
+  bottom: 0%;
+  border-radius: .4rem;
+  font-size: .68em;
+  padding: .5em 1em;
+}
+
+button.image-gallery-icon:hover {
+  background-color: transparent;
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+
+.floatToRight {
+  float: right;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.sm-gap {
+  gap: .4em;
+}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  header, main, nav, footer {
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+
+  header {
+    padding: 1.7em 1em;
+    margin-top: 3rem;
+  }
+
+  footer {
+    margin-bottom: 2.5rem;
+  }
+
+  main, footer {
+    padding: 30px 2em;
+  }
+
+  nav.local {
+    margin: 0px;
+  }
+
+  code {font-size: 1.1em;}
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+@media (hover: hover) and (pointer: fine) {
+  .image-gallery-bullets .image-gallery-bullet.active:hover,
+  .image-gallery-bullets .image-gallery-bullet:hover {
+    background: var(--coolBlue);
+    border: 1px solid var(--coolBlue);
+  }
+}
