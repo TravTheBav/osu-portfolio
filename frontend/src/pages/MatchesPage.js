@@ -23,14 +23,14 @@ function MatchesPage({ setMatch }) {
     // UPDATE a single match
     const onEditMatch = async match => {
         setMatch(match);
-        redirect("/update");
+        redirect(`${backend_url}/update`);
     }
 
     // DELETE a single match  
     const onDeleteMatch = async _id => {
-        const response = await fetch(`/matches/${_id}`, { method: 'DELETE' });
+        const response = await fetch(`${backend_url}/matches/${_id}`, { method: 'DELETE' });
         if (response.status === 200) {
-            const getResponse = await fetch('/matches');
+            const getResponse = await fetch(`${backend_url}/matches`);
             const matches = await getResponse.json();
             setMatches(matches);
         } else {
@@ -48,7 +48,7 @@ function MatchesPage({ setMatch }) {
         <>
             <h2>List of Matches</h2>
             <p>View all previously entered Age of Empires 4 matches.</p>
-            <Link to="/create">Add Match</Link>
+            <Link to={`${backend_url}/create`}>Add Match</Link>
             <MatchList 
                 matches={matches} 
                 onEdit={onEditMatch} 
