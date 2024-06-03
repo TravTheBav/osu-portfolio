@@ -77,6 +77,7 @@ export const EditMatchPageTable = ({ matchToEdit }) => {
                             type="submit"
                             onClick={editMatch}
                             id="submit"
+                            className='no-margin'
                         >Update</button>
                     </td>
                 </tr>

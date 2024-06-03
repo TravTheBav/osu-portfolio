@@ -10,6 +10,8 @@ function HomePage() {
             to become a software developer. I am particularly interested in full-stack web development, but would also love to dive into games development some day as well.
             Listed here are all the technologies used to make this website. If you want to learn more about some of these, click on the Topics tab.
             </p>
+            <p><em>Note: the Matches, Order, and Staff tabs contain content that is not related to each other in any meaningful way. Instead, these pages are designed to 
+                demonstrate knowledge of the technologies listed here.</em></p>
             <dl>
                 <dt><strong>HTML &#40;Hyper Text Markup Language&#41;</strong></dt>
                 <dd>

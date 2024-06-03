@@ -84,6 +84,7 @@ export const AddMatchPageTable = () => {
                             type="submit"
                             onClick={addMatch}
                             id="submit"
+                            className='no-margin'
                         >Add</button>
                     </td>
                 </tr>

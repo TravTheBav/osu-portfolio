@@ -362,6 +362,11 @@ dd {
   margin-bottom: 1.2em;
 }
 
+/*  ----- Classes for adujsting margins and padding ----- */
+.no-margin {
+  margin: 0;
+}
+
 /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
 
 .floatToRight {

@@ -20,9 +20,7 @@ function StaffPage() {
                     setResults(peopleData.results);
                 })
                 .catch(error => console.error(error));
-            
         }
-        
     }
 
     return (
@@ -31,9 +29,9 @@ function StaffPage() {
         <article>
             <p>
                 Want to see the geniuses behind this great website? Click on the button below to see all of our amazing staff (just kidding, these are fake people).
-                This page uses the <a href="https://randomuser.me/documentation">Random User Generator API</a> to fill in the table of users with sample data. Each time
-                the button is pressed, a request is made to the API, which generates data for a new person and sends it back to the browser. If everything is successful, a new
-                row containing the data will be appended to the table. Otherwise, an error message will be displayed in the status box if the API could not process the request.
+                This page uses the <a href="https://randomuser.me/documentation">Random User Generator API</a> to fill in the table of users with sample data. When
+                the button is clicked, a request is made to the API, which generates data for 10 people and sends it back to the browser. If everything is successful, 10 new rows
+                containing the data will be appended to the table. Otherwise, an alert message will pop up if the API is down.
             </p>
 
             <button id="displayMember" onClick={generateRandomPeople}>display members</button>
