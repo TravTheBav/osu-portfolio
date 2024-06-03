@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GlobalNav from './components/GlobalNav';
 import './App.css';
 
+import 'dotenv/config';
+const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 // Import pages you have completed:
 // Home, Topics, Gallery, Contact, and Staff Pages
 // ---------------------------------------------------
@@ -46,7 +49,7 @@ function App() {
                   
                   <Route path="/" element={<HomePage />} />
                   <Route path="/topics" element={<TopicsPage />} />
-                  <Route path="/matches" element={<MatchesPage setMatch={setMatchToEdit}/>} />
+                  <Route path={BACKEND_BASE_URL + "/matches"} element={<MatchesPage setMatch={setMatchToEdit}/>} />
                   {/* <Route path="/contacts" element={<ContactsPage />} /> */}
                   <Route path="/gallery" element={<GalleryPage />} /> 
                   <Route path="/order" element={<OrderPage />} />
