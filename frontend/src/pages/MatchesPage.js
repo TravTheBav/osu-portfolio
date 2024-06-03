@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import MatchList from '../components/MatchList';
 import { Link } from 'react-router-dom';
 
-const backend_url = "https://osu-portfolio-frontend.onrender.com"
+const backend_url = "https://osu-portfolio-backend.onrender.com"
 
 function MatchesPage({ setMatch }) {
     // Use the Navigate for redirection
