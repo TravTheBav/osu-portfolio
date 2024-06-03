@@ -23,7 +23,7 @@ function MatchesPage({ setMatch }) {
     // UPDATE a single match
     const onEditMatch = async match => {
         setMatch(match);
-        redirect(`${backend_url}/update`);
+        redirect('/update');
     }
 
     // DELETE a single match  
@@ -48,7 +48,7 @@ function MatchesPage({ setMatch }) {
         <>
             <h2>List of Matches</h2>
             <p>View all previously entered Age of Empires 4 matches.</p>
-            <Link to={`${backend_url}/create`}>Add Match</Link>
+            <Link to={'/create'}>Add Match</Link>
             <MatchList 
                 matches={matches} 
                 onEdit={onEditMatch} 
