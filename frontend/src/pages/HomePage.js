@@ -9,6 +9,7 @@ function HomePage() {
             Hello there, my name is Travis Zito, and I am currently studying computer science at Oregon State University for a BS degree. Upon graduation, my goal is
             to become a software developer. I am particularly interested in full-stack web development, but would also love to dive into games development some day as well.
             Listed here are all the technologies used to make this website. If you want to learn more about some of these, click on the Topics tab.
+            </p>
             <dl>
                 <dt><strong>HTML &#40;Hyper Text Markup Language&#41;</strong></dt>
                 <dd>
@@ -116,7 +117,6 @@ function HomePage() {
                     Note that other operations do exist, such as <strong>patch</strong> &#40;a partial update of a resource, tied to the HTTP PATCH method&#41;.
                 </dd>
             </dl>
-            </p>
         </article>
         </>
     );

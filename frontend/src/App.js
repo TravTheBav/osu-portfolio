@@ -15,7 +15,7 @@ import TopicsPage from './pages/TopicsPage';
 // import ContactsPage from './pages/ContactPage'; 
 import GalleryPage from './pages/GalleryPage';
 import OrderPage from './pages/OrderPage';
-// import StaffPage from './pages/StaffPage';
+import StaffPage from './pages/StaffPage';
 
 import MatchesPage from './pages/MatchesPage';
 
@@ -50,7 +50,7 @@ function App() {
                   {/* <Route path="/contacts" element={<ContactsPage />} /> */}
                   <Route path="/gallery" element={<GalleryPage />} /> 
                   <Route path="/order" element={<OrderPage />} />
-                  {/* <Route path="/staff" element={<StaffPage />} /> */}
+                  <Route path="/staff" element={<StaffPage />} />
                
                   {/* Use these if your schema requires LONG data input: */}
                   <Route path="/create" element={<AddMatchPageTable />} /> 

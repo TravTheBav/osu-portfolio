@@ -14,7 +14,7 @@ function GlobalNav() {
         {/* <Link to="../contacts">Contact</Link> */}
         <Link to="../gallery">Gallery</Link>
         <Link to="../order">Order</Link>
-        {/* <Link to="../staff">Staff</Link> */}
+        <Link to="../staff">Staff</Link>
     </nav>
   );
 }
