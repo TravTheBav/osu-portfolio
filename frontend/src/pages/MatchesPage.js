@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import MatchList from '../components/MatchList';
 import { Link } from 'react-router-dom';
 
+import 'dotenv/config';
+const backend_url = process.env.BACKEND_URL;
+
 function MatchesPage({ setMatch }) {
     // Use the Navigate for redirection
     const redirect = useNavigate();
@@ -13,7 +16,7 @@ function MatchesPage({ setMatch }) {
 
     // RETRIEVE the entire list of matches
     const loadMatches = async () => {
-        const response = await fetch('/matches');
+        const response = await fetch(`${backend_url}/matches`);
         const matches = await response.json();
         setMatches(matches);
     } 
