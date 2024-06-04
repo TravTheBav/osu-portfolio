@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+const backend_url = "https://osu-portfolio-backend.onrender.com"
+
 // Change the icons, function names, and parameters 
 // to fit your portfolio topic and schema.
 
@@ -14,7 +16,7 @@ export const AddMatchPageTable = () => {
 
     const addMatch = async () => {
         const newMatch = { civilization, relicsCaptured, date };
-        const response = await fetch('/matches', {
+        const response = await fetch(`${backend_url}/matches`, {
             method: 'post',
             body: JSON.stringify(newMatch),
             headers: {

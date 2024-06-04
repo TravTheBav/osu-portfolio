@@ -1,6 +1,8 @@
 import React, { useState }  from 'react';
 import { useNavigate } from "react-router-dom";
 
+const backend_url = "https://osu-portfolio-backend.onrender.com"
+
 export const EditMatchPageTable = ({ matchToEdit }) => {
  
     const [civilization, setTitle] = useState(matchToEdit.civilization);
@@ -10,7 +12,7 @@ export const EditMatchPageTable = ({ matchToEdit }) => {
     const redirect = useNavigate();
 
     const editMatch = async () => {
-        const response = await fetch(`/matches/${matchToEdit._id}`, {
+        const response = await fetch(`${backend_url}/matches/${matchToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({ 
                 civilization: civilization, 
