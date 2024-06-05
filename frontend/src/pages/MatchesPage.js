@@ -48,6 +48,7 @@ function MatchesPage({ setMatch }) {
         <>
             <h2>List of Matches</h2>
             <p>View all previously entered Age of Empires 4 matches.</p>
+            <p><em>Matches may take up to 30 seconds to load. Refresh the page after this time if they do not appear.</em></p>
             <Link to={'/create'}>Add Match</Link>
             <MatchList 
                 matches={matches} 
