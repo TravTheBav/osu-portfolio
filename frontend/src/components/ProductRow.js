@@ -3,7 +3,7 @@ import ProductQuantity from './ProductQuantity';
 import SubTotal from './SubTotal';
 
 
-function ProductRow({ product, key }) {
+function ProductRow({ product, total, setTotal }) {
 
     const maxQuantity = 10;
     const minQuantity = 0;

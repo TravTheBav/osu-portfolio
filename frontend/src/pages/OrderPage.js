@@ -26,7 +26,7 @@ function OrderPage() {
                 </thead>
                 <tbody>
                     { products.map((product, idx) => (
-                    <ProductRow product={product} key={idx}/>
+                    <ProductRow product={product} key={idx} total={total} setTotal={setTotal}/>
                     )) }
                 </tbody>
                 <tfoot>
