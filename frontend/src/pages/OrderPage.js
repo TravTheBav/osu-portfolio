@@ -30,8 +30,10 @@ function OrderPage() {
                     )) }
                 </tbody>
                 <tfoot>
-                    <th>Total</th>
-                    <td colSpan={4}><Total total={total}/></td>
+                    <tr>
+                        <th>Total</th>
+                        <td colSpan={4}><Total total={total}/></td>
+                    </tr>
                 </tfoot>
             </table>
         </article>
