@@ -18,6 +18,7 @@ function OrderPage() {
                         <th>product</th>
                         <th>price</th>
                         <th>quantity</th>
+                        <th>subtotal</th>
                     </tr>
                 </thead>
                 <tbody>
