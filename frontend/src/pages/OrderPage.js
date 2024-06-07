@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import ProductRow from '../components/ProductRow';
 import products from '../data/products';
+import Total from '../components/Total';
 
 
 function OrderPage() {
+
+    const [total, setTotal] = useState(0);
 
     return (
         <>
@@ -26,6 +29,10 @@ function OrderPage() {
                     <ProductRow product={product} key={idx}/>
                     )) }
                 </tbody>
+                <tfoot>
+                    <th>Total</th>
+                    <td colSpan={4}><Total total={total}/></td>
+                </tfoot>
             </table>
         </article>
         </> 

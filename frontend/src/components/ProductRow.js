@@ -5,9 +5,31 @@ import SubTotal from './SubTotal';
 
 function ProductRow({ product, key }) {
 
+    const maxQuantity = 10;
+    const minQuantity = 0;
     const [quantity, setQuantity] = useState(0);
-    const increaseQuantity = () => setQuantity(Math.min(quantity + 1, 10));
-    const decreaseQuantity = () => setQuantity(Math.max(quantity - 1, 0));
+
+    // returns the total + price, rounded to 2 decimal places
+    const formatTotal = (price) => {
+        return (Number(total) + price).toFixed(2);
+    }
+
+    const increaseQuantity = () => {
+        // increase the total by the price of one unit if the quantity was increased
+        if (quantity < maxQuantity) {
+            setTotal(formatTotal(product.price));
+        }
+        setQuantity(Math.min(quantity + 1, maxQuantity));
+    }
+
+    const decreaseQuantity = () => {
+        // decrease the total by the price of one unit if the quantity was decreased
+        if (quantity > minQuantity) {
+            setTotal(formatTotal(-1 * product.price));
+        }
+
+        setQuantity(Math.max(quantity - 1, minQuantity));
+    }
     
     return (
         <tr>

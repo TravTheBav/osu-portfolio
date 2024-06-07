@@ -373,6 +373,10 @@ dd {
   float: right;
 }
 
+.align-left {
+  text-align: left;
+}
+
 .align-right {
   text-align: right;
 }

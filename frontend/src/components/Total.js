@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 
-function SubTotal({quantity, price}) {
+function Total({total}) {
     return (
         <div className="align-right">
-            ${(quantity * price).toFixed(2)}
+            ${total}
         </div>
     );
 }
 
-export default SubTotal;
+export default Total;
